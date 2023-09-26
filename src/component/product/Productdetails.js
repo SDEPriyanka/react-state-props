@@ -1,12 +1,11 @@
 import React from 'react'
 
-function Productdetails(props) {
 
- console.log(props)
-    
+function Productdetails(props) {    
   return (
     <div>
         <div className=''>{props.prodcutTitle} </div>
+       
          <div className="productlist">
         <table className="table">
           <thead>
@@ -21,9 +20,9 @@ function Productdetails(props) {
           <tbody>
              
             {
-                props.user.map((user) => {
+                props.user.map((user,i) => {
                     return (
-                        <tr>
+                        <tr key={user.id}>
                             <td>{user.id}</td>
                             <td>{user.name}</td>
                             <td>{user.phone}</td>
